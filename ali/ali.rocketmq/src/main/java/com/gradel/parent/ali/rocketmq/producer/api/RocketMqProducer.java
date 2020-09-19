@@ -1,0 +1,48 @@
+package com.gradel.parent.ali.rocketmq.producer.api;
+
+import com.aliyun.openservices.ons.api.Admin;
+import com.aliyun.openservices.ons.api.SendCallback;
+import com.gradel.parent.ali.rocketmq.model.RockMqMessage;
+import com.gradel.parent.ali.rocketmq.model.RockMqSendResult;
+import com.gradel.parent.ali.rocketmq.serializer.MqSerializer;
+
+/**
+ * @author: sdeven.chen.dongwei@gmail.com
+ * @date: 2016/11/24
+ * @Description: 无序消息生产者接口
+ * @see com.aliyun.openservices.ons.api.Producer
+ */
+public interface RocketMqProducer extends Admin {
+    /**
+     * 同步发送消息
+     *
+     * @param message
+     * @return 发送结果，true 表示发送成功，否则发送失败
+     */
+    <T> boolean send(final RockMqMessage<T> message, final MqSerializer<T> serializer);
+
+    /**
+     * 同步发送消息，只要不抛异常就表示成功
+     *
+     * @param message
+     * @return 发送结果，true 表示发送成功，否则发送失败
+     */
+    <T> RockMqSendResult sendBackResult(final RockMqMessage<T> message, final MqSerializer<T> serializer);
+
+
+    /**
+     * 发送消息，Oneway形式，服务器不应答，无法保证消息是否成功到达服务器
+     *
+     * @param message
+     * @return 发送结果，true 表示发送成功，否则发送失败
+     */
+    <T> boolean sendOneway(final RockMqMessage<T> message, final MqSerializer<T> serializer);
+
+    /**
+     * 发送消息，异步Callback形式
+     *
+     * @param message
+     * @return 发送结果，true 表示发送成功，否则发送失败
+     */
+    <T> boolean sendAsync(final RockMqMessage<T> message, final MqSerializer<T> serializer, final SendCallback sendCallback);
+}

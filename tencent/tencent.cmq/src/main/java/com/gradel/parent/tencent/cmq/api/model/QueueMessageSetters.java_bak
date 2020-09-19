@@ -1,0 +1,29 @@
+package com.ml.cmq.api.model;
+
+import org.apache.commons.lang3.StringUtils;
+
+public class QueueMessageSetters {
+    public static boolean setMsgBody(QueueMessage queueMessage, String msgBody) {
+        if (StringUtils.isNotBlank(msgBody)) {
+            queueMessage.setMsgBody(msgBody);
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean setDelayTime(QueueMessage queueMessage, int delayTime) {
+        if (delayTime >= 0) {
+            queueMessage.setDelayTime(delayTime);
+            return true;
+        }
+        return false;
+    }
+
+    public static  boolean setQueue(QueueMessage queueMessage, String queue) {
+        if (StringUtils.isNotBlank(queue)) {
+            queueMessage.setQueue(queue);
+            return true;
+        }
+        return false;
+    }
+}

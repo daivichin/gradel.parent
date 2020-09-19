@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.gradel.parent.component.web.configuration.CommonWebAutoConfiguration\
+  com.gradel.parent.component.web.configuration.MvcConfiguration
+

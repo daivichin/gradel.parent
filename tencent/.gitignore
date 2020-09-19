@@ -1,0 +1,44 @@
+## IntelliJ IDEA ##
+.idea/
+/*.iml
+*.iml
+*.ipr
+*.iws
+
+## DUBBO ##
+.metadata/
+
+##MAVEN##
+dependency-reduced-pom.xml
+
+## LOG ##
+logs/
+log/
+*.log
+
+## JRebel ##
+rebel.xml
+
+## MAC ##
+.DS_Store
+
+## STS ##
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.settings
+.springBeans
+
+## JDK ##
+*.jar
+*.war
+*.class
+*.lock
+*.swp
+*.out
+target/
+**/bin/*
+/out/
+*.bak

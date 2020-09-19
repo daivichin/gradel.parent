@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gradel</groupId>
+    <artifactId>gradel.parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.1.M1.RELEASE</version>
+
+    <modules>
+        <module>ali</module>
+        <module>tencent</module>
+        <module>component</module>
+        <module>common</module>
+        <module>dependencies</module>
+    </modules>
+    <properties>
+        <java.encoding>UTF-8</java.encoding>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
+        <spring-cloud-starter-alibaba-nacos-discovery.version>
+            2.1.0.RELEASE
+        </spring-cloud-starter-alibaba-nacos-discovery.version>
+        <spring.version>5.1.9.RELEASE</spring.version>
+        <rocketmq.version>4.5.2</rocketmq.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <elasticsearch.version>7.1.1</elasticsearch.version>
+        <commons-collections4.version>4.3</commons-collections4.version>
+        <auth-jwt.version>3.8.1</auth-jwt.version>
+        <google-guava.version>28.0-jre</google-guava.version>
+        <bcprov-jdk15on.version>1.62</bcprov-jdk15on.version>
+        <commons-io.version>2.6</commons-io.version>
+        <fastjson.version>1.2.72</fastjson.version>
+        <curator.version>2.12.0</curator.version>
+        <mockito.version>1.10.19</mockito.version>
+        <gradel.common.version>1.0.1.M1.RELEASE</gradel.common.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <protostuff.version>1.1.3</protostuff.version>
+        <http.version>3.1</http.version>
+        <commons-cli.version>1.3.1</commons-cli.version>
+        <testng.version>6.9.10</testng.version>
+        <aliyun.ons.client.version>1.8.0.Final</aliyun.ons.client.version>
+        <javax.servlet.api.version>4.0.0</javax.servlet.api.version>
+        <hutool-all.version>5.0.5</hutool-all.version>
+        <redisson.version>3.8.0</redisson.version>
+        <jetcache-starter.version>2.6.0.M3</jetcache-starter.version>
+        <common.util.version>1.0.1.M1.RELEASE</common.util.version>
+        <common.autoimport.version>1.0.1.M1.RELEASE</common.autoimport.version>
+        <common.task.version>1.0.1.M1.RELEASE</common.task.version>
+        <tencent.cmq.example.version>1.0.1.M1.RELEASE</tencent.cmq.example.version>
+        <tencent.cmq.version>1.0.1.M1.RELEASE</tencent.cmq.version>
+        <tencent.cmq.ext.version>1.0.1.M1.RELEASE</tencent.cmq.ext.version>
+        <component.security.version>1.0.1.M1.RELEASE</component.security.version>
+        <component.jwt.version>1.0.1.M1.RELEASE</component.jwt.version>
+        <common.zookeeper.version>1.0.1.M1.RELEASE</common.zookeeper.version>
+        <ali.rocketmq.version>1.0.1.M1.RELEASE</ali.rocketmq.version>
+        <ali.rocketmq.biz.version>1.0.1.M1.RELEASE</ali.rocketmq.biz.version>
+        <ali.rocketmq.autoconfigure.version>1.0.1.M1.RELEASE</ali.rocketmq.autoconfigure.version>
+        <common.db_upgrade.version>1.0.1.M1.RELEASE</common.db_upgrade.version>
+        <common.es_sync.version>1.0.1.M1.RELEASE</common.es_sync.version>
+        <common.jetcache.version>1.0.1.M1.RELEASE</common.jetcache.version>
+        <common.redisson.version>1.0.1.M1.RELEASE</common.redisson.version>
+        <common.share.version>1.0.1.M1.RELEASE</common.share.version>
+        <component.service.version>1.0.1.M1.RELEASE</component.service.version>
+        <component.web.version>1.0.1.M1.RELEASE</component.web.version>
+        <component.security.autoconfigure.version>1.0.1.M1.RELEASE</component.security.autoconfigure.version>
+        <apache.rocketmq.version>1.0.1.M1.RELEASE</apache.rocketmq.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.rocketmq</artifactId>
+                <version>${apache.rocketmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>ali.rocketmq</artifactId>
+                <version>${ali.rocketmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>ali.rocketmq.autoconfigure</artifactId>
+                <version>${ali.rocketmq.autoconfigure.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>ali.rocketmq.biz</artifactId>
+                <version>${ali.rocketmq.biz.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.autoimport</artifactId>
+                <version>${common.autoimport.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.db_upgrade</artifactId>
+                <version>${common.db_upgrade.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.jetcache</artifactId>
+                <version>${common.jetcache.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.redisson</artifactId>
+                <version>${common.redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.task</artifactId>
+                <version>${common.task.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.util</artifactId>
+                <version>${common.util.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>common.zookeeper</artifactId>
+                <version>${common.zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>tencent.cmq.example</artifactId>
+                <version>${tencent.cmq.example.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>tencent.cmq</artifactId>
+                <version>${tencent.cmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>tencent.cmq.ext</artifactId>
+                <version>${tencent.cmq.ext.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>component.jwt.security</artifactId>
+                <version>${component.jwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>component.service</artifactId>
+                <version>${component.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gradel</groupId>
+                <artifactId>component.web</artifactId>
+                <version>${component.web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov-jdk15on.version}</version>
+            </dependency>
+
+            <!--elasticsearch -->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.elasticsearch</groupId>
+                        <artifactId>elasticsearch</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.client</groupId>
+                        <artifactId>elasticsearch-rest-client</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${auth-jwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${google-guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dyuproject.protostuff</groupId>
+                <artifactId>protostuff-core</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dyuproject.protostuff</groupId>
+                <artifactId>protostuff-runtime</artifactId>
+                <version>${protostuff.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${http.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-cli</groupId>
+                <artifactId>commons-cli</artifactId>
+                <version>${commons-cli.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>${aliyun.ons.client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <!--移除elasticsearcj 6.4-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.elasticsearch</groupId>
+                        <artifactId>elasticsearch</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.client</groupId>
+                        <artifactId>transport</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.distribution.integ-test-zip</groupId>
+                        <artifactId>elasticsearch</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.plugin</groupId>
+                        <artifactId>transport-netty4-client</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.client</groupId>
+                        <artifactId>elasticsearch-rest-client</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.elasticsearch.client</groupId>
+                        <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-starter-alibaba-nacos-discovery.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.dubbo</groupId>
+                        <artifactId>dubbo-registry-nacos</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!--官方dependencies 引入版本错误 更换为2.7.3-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>2.7.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.8</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${java.encoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <configuration>
+                        <descriptors>
+                            <descriptor>src/main/resources/assembly.xml</descriptor>
+                        </descriptors>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+    <!--  <pluginRepositories>
+          <pluginRepository>
+              <id>nexus</id>
+              <name>Team Nexus Repository</name>
+              <url>http://{nexus.ip}:8081/repository/maven-public/</url>
+          </pluginRepository>
+      </pluginRepositories>
+
+      <distributionManagement>
+          <repository>
+              <id>releases</id>
+              <name>Releases</name>
+              <url>http://{nexus.ip}:8081/repository/maven-releases/</url>
+          </repository>
+          <snapshotRepository>
+              <id>snapshots</id>
+              <name>Snapshots</name>
+              <url>http://{nexus.ip}:8081/repository/maven-snapshots/</url>
+          </snapshotRepository>
+      </distributionManagement>
+
+      <repositories>
+          &lt;!&ndash; 配置nexus远程仓库 &ndash;&gt;
+          <repository>
+              <id>nexus</id>
+              <name>Nexus Snapshot Repository</name>
+              <url>http://{nexus.ip}:8081/repository/maven-public/</url>
+              <releases>
+                  <enabled>true</enabled>
+              </releases>
+              <snapshots>
+                  <enabled>true</enabled>
+              </snapshots>
+          </repository>
+      </repositories>-->
+</project>

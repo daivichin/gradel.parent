@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- spring 加载参数配置文件 -->
+    <context:property-placeholder location="classpath:properties/app.properties" file-encoding="UTF-8"/>
+    <bean class="com.gradel.parent.tencent.cmq.test.util.SpringUtil"/>
+
+    <bean id="queueEnv" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="${cmq.topicEnv}" />
+    </bean>
+
+    <!-- 初始化MQ主题环镜 （必须放在生产者和消费者前面）-->
+    <bean class="com.gradel.parent.tencent.cmq.ext.queue.env.QueueEnvBean">
+        <property name="queueEnv" ref="queueEnv" />
+    </bean>
+
+    <!-- mq 日志配置 -->
+    <bean class="com.gradel.parent.tencent.cmq.ext.config.CMQLoggerConfigBean">
+        <property name="logRoot" value="${cmq.logRoot}"/>
+        <property name="logLevel" value="${cmq.logLevel}"/>
+        <property name="logMaxIndex" value="${cmq.logMaxIndex}"/>
+    </bean>
+
+    <!-- 消费者 -->
+    <bean id="consumer" class="com.gradel.parent.tencent.cmq.ext.consumer.CMQConsumerBean" init-method="start" destroy-method="shutdown">
+        <property name="properties" > <!--消费者配置信息-->
+            <bean class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+                <property name="location" value="classpath:properties/mq-consumer.properties"/>
+            </bean>
+        </property>
+        <property name="subscribeQueueName">
+            <map>
+                <entry value-ref="consumerService">
+                    <key>
+                        <bean class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+                            <property name="staticField" value="com.gradel.parent.tencent.cmq.test.queue.QueueEnum.QUEUE_TEST" />
+                        </bean>
+                    </key>
+                </entry>
+
+            </map>
+        </property>
+    </bean>
+
+    <bean id="consumerService" class="com.gradel.parent.tencent.cmq.test.impl.ConsumerServiceImpl"/>
+</beans>
