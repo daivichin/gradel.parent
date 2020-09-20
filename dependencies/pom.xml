@@ -2,13 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.gradel</groupId>
+    <parent>
+        <groupId>com.gradel</groupId>
+        <artifactId>gradel.parent</artifactId>
+        <version>1.0.1.M1-SNAPSHOT</version>
+    </parent>
     <artifactId>dependencies</artifactId>
-    <version>1.0.1.M1.RELEASE</version>
+    <version>1.0.1.M1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>gradel.dependencies</name>
-    <description>gradel.dependencies</description>
 
+
+    <name>dependencies</name>
+    <description>dependencies</description>
     <url>https://projects.spring.io/spring-boot/#</url>
 
     <developers>
@@ -19,9 +24,7 @@
             <organizationUrl>https://www.gradel.io</organizationUrl>
         </developer>
     </developers>
-    <scm>
-        <url>https://github.com/spring-projects/spring-boot</url>
-    </scm>
+
     <properties>
         <java.encoding>UTF-8</java.encoding>
         <java.version>1.8</java.version>
@@ -40,7 +43,7 @@
         <fastjson.version>1.2.72</fastjson.version>
         <curator.version>2.12.0</curator.version>
         <mockito.version>1.10.19</mockito.version>
-        <gradel.common.version>1.0.1.M1.RELEASE</gradel.common.version>
+        <gradel.common.version>1.0.1.M1-SNAPSHOT</gradel.common.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <protostuff.version>1.1.3</protostuff.version>
         <http.version>3.1</http.version>
@@ -49,27 +52,27 @@
         <aliyun.ons.client.version>1.8.0.Final</aliyun.ons.client.version>
         <javax.servlet.api.version>4.0.0</javax.servlet.api.version>
 
-        <common.util.version>1.0.1.M1.RELEASE</common.util.version>
-        <common.autoimport.version>1.0.1.M1.RELEASE</common.autoimport.version>
-        <common.task.version>1.0.1.M1.RELEASE</common.task.version>
-        <tencent.cmq.example.version>1.0.1.M1.RELEASE</tencent.cmq.example.version>
-        <tencent.cmq.version>1.0.1.M1.RELEASE</tencent.cmq.version>
-        <tencent.cmq.ext.version>1.0.1.M1.RELEASE</tencent.cmq.ext.version>
-        <component.security.version>1.0.1.M1.RELEASE</component.security.version>
-        <component.jwt.version>1.0.1.M1.RELEASE</component.jwt.version>
-        <component.nodeflow.version>1.0.1.M1.RELEASE</component.nodeflow.version>
-        <common.zookeeper.version>1.0.1.M1.RELEASE</common.zookeeper.version>
-        <ali.rocketmq.version>1.0.1.M1.RELEASE</ali.rocketmq.version>
-        <ali.rocketmq.autoconfigure.version>1.0.1.M1.RELEASE</ali.rocketmq.autoconfigure.version>
-        <ali.rocketmq.biz.version>1.0.1.M1.RELEASE</ali.rocketmq.biz.version>
-        <common.db_upgrade.version>1.0.1.M1.RELEASE</common.db_upgrade.version>
-        <common.es_sync.version>1.0.1.M1.RELEASE</common.es_sync.version>
-        <common.jetcache.version>1.0.1.M1.RELEASE</common.jetcache.version>
-        <common.redisson.version>1.0.1.M1.RELEASE</common.redisson.version>
-        <component.service.version>1.0.1.M1.RELEASE</component.service.version>
-        <component.web.version>1.0.1.M1.RELEASE</component.web.version>
-        <component.security.autoconfigure.version>1.0.1.M1.RELEASE</component.security.autoconfigure.version>
-        <apache.rocketmq.version>1.0.1.M1.RELEASE</apache.rocketmq.version>
+        <common.util.version>1.0.1.M1-SNAPSHOT</common.util.version>
+        <common.autoimport.version>1.0.1.M1-SNAPSHOT</common.autoimport.version>
+        <common.task.version>1.0.1.M1-SNAPSHOT</common.task.version>
+        <tencent.cmq.example.version>1.0.1.M1-SNAPSHOT</tencent.cmq.example.version>
+        <tencent.cmq.version>1.0.1.M1-SNAPSHOT</tencent.cmq.version>
+        <tencent.cmq.ext.version>1.0.1.M1-SNAPSHOT</tencent.cmq.ext.version>
+        <component.security.version>1.0.1.M1-SNAPSHOT</component.security.version>
+        <component.jwt.version>1.0.1.M1-SNAPSHOT</component.jwt.version>
+        <component.nodeflow.version>1.0.1.M1-SNAPSHOT</component.nodeflow.version>
+        <common.zookeeper.version>1.0.1.M1-SNAPSHOT</common.zookeeper.version>
+        <ali.rocketmq.version>1.0.1.M1-SNAPSHOT</ali.rocketmq.version>
+        <ali.rocketmq.autoconfigure.version>1.0.1.M1-SNAPSHOT</ali.rocketmq.autoconfigure.version>
+        <ali.rocketmq.biz.version>1.0.1.M1-SNAPSHOT</ali.rocketmq.biz.version>
+        <common.db_upgrade.version>1.0.1.M1-SNAPSHOT</common.db_upgrade.version>
+        <common.es_sync.version>1.0.1.M1-SNAPSHOT</common.es_sync.version>
+        <common.jetcache.version>1.0.1.M1-SNAPSHOT</common.jetcache.version>
+        <common.redisson.version>1.0.1.M1-SNAPSHOT</common.redisson.version>
+        <component.service.version>1.0.1.M1-SNAPSHOT</component.service.version>
+        <component.web.version>1.0.1.M1-SNAPSHOT</component.web.version>
+        <component.security.autoconfigure.version>1.0.1.M1-SNAPSHOT</component.security.autoconfigure.version>
+        <apache.rocketmq.version>1.0.1.M1-SNAPSHOT</apache.rocketmq.version>
         <bboss.version>6.2.0</bboss.version>
         <sqlite.version>3.30.1</sqlite.version>
         <byte.buddy.version>1.7.11</byte.buddy.version>
@@ -480,29 +483,4 @@
             <!--mybatis文件生成器模版引擎注入jar-->
         </dependencies>
     </dependencyManagement>
-    <profiles>
-        <profile>
-            <id>spring</id>
-            <repositories>
-                <repository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>http://192.168.100.176:8081/repository/maven-releases</url>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>http://192.168.100.176:8081/repository/maven-releases</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
-    </profiles>
 </project>

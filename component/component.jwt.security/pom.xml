@@ -5,10 +5,9 @@
     <parent>
         <groupId>com.gradel</groupId>
         <artifactId>component</artifactId>
-        <version>1.0.1.M1.RELEASE</version>
+        <version>1.0.1.M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>component.jwt.security</artifactId>
     <packaging>jar</packaging>
 

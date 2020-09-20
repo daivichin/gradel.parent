@@ -6,12 +6,11 @@
     <parent>
         <groupId>com.gradel</groupId>
         <artifactId>gradel.parent</artifactId>
-        <version>1.0.1.M1.RELEASE</version>
+        <version>1.0.1.M1-SNAPSHOT</version>
     </parent>
     <artifactId>common</artifactId>
-
     <packaging>pom</packaging>
-    <version>1.0.1.M1.RELEASE</version>
+    <version>1.0.1.M1-SNAPSHOT</version>
 
     <modules>
         <module>common.autoimport</module>

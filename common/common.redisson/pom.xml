@@ -6,12 +6,12 @@
     <parent>
         <groupId>com.gradel</groupId>
         <artifactId>common</artifactId>
-        <version>1.0.1.M1.RELEASE</version>
+        <version>1.0.1.M1-SNAPSHOT</version>
     </parent>
     <artifactId>common.redisson</artifactId>
 
     <packaging>jar</packaging>
-    <version>1.0.1.M1.RELEASE</version>
+    <version>1.0.1.M1-SNAPSHOT</version>
 
 
     <properties>
